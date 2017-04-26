@@ -19,7 +19,7 @@ double normalMapping(int n, int x){
 }
 
 //將 0 到 <1 的小數無條件捨棄為 0 到 n-1 的整數
-double deNormalMapping(int n, double x){
+double inverseNormalMapping(int n, double x){
     return int(x*n);
 }
 
@@ -44,4 +44,9 @@ double initTuningFuncTable(){
             tuningFuncTable[i][j] = _tuningFunc(p, q, t, x);
         }
     }
+}
+
+double initAllMathFunc(){
+    initNormalMappingTable();
+    initTuningFuncTable();
 }
